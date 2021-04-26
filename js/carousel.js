@@ -1,15 +1,15 @@
-const track = document.querySelector('.carousel__track'); //este comando buscara en mis documentos aquel que tenga la clase .carousel__track
+  const track = document.querySelector('.carousel__track'); //este comando buscara en mis documentos aquel que tenga la clase .carousel__track
 const slides = Array.from(track.children); //definimos nuestros slides, podemos definir a c/u de ellos, pero es mejor definirlos con un array
 const nextButton = document.querySelector('.carousel__button--right');//con el querySelector debemos llamar a la clase mediante el '.class'
 const prevButton = document.querySelector('.carousel__button--left');
 const dotsNav = document.querySelector('.carousel__nav')
 const dots = Array.from(dotsNav.children);
 
-//otro aspecto importante que debemos tener en cuenta es el tamanio de las imagenes y debemos tenerlo definido ya que va a depender de si la pantalla
-//de nuestro dispositivo es mas grande o mas pequenia. El caso es que va a depender del width de nuestra variable track "const track = document.querySelector('.carousel__track');"
-const slideWidth = slides[0].getBoundingClientRect().width;//getBoundingClientRect nos indica las coordenadas de los ejes Y y X asi como las alturas y anchuras de las imagenes con respecto al tamanio actual de la pantalla.
-//indicando .width al final de nuestro string nos indica el width del slide en el que estamos parados de acuerdo al width de la pantalla.
-//console.log(slideWidth)
+/*otro aspecto importante que debemos tener en cuenta es el tamanio de las imagenes y debemos tenerlo definido ya que va a depender de si la pantalla
+de nuestro dispositivo es mas grande o mas pequenia. El caso es que va a depender del width de nuestra variable track "const track = document.querySelector('.carousel__track');"*/
+const slideWidth = slides[0].getBoundingClientRect().width;/*getBoundingClientRect nos indica las coordenadas de los ejes Y y X asi como las alturas y anchuras de las imagenes con respecto al tamanio actual de la pantalla.
+indicando .width al final de nuestro string nos indica el width del slide en el que estamos parados de acuerdo al width de la pantalla.*/
+
 
 //debemos arreglar los slides uno proximo al otro
 //slides[0].style.left = slideWidth * 0 + 'px'; para hacer este arrangement podemos hacerlo de esta forma, definiendo a cada slide de manera individual.
